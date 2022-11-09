@@ -1,0 +1,28 @@
+#screen {
+    text-align: center;
+}
+.avoid-clicks .btnClear {
+    pointer-events: none;
+}
+.btnClear {
+    opacity: 0;
+}
+.welcome {
+    text-align: center;
+}
+#greetings {
+    margin: 0 auto;
+    top: -1.5em;
+}
+.header {
+    position: relative;
+    top: 2.5em;
+}
+.menu {
+    position: relative;
+    margin-left: 25em;
+}
+.menuWindow {
+    display: none;
+    margin: 0.5em;
+}
