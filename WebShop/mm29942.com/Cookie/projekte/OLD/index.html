@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttonSTYLE.css">
+    <link rel="icon" href="IMG/cicada.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function CShow2() {
+            document.getElementById('btnMH').style.display = 'inline';
+            document.getElementById('btnMS').style.display = 'none';
+            document.getElementById('menu').style.visibility = 'visible';
+
+            if (window.innerWidth > 600) {
+                document.getElementById('logo').style.visibility = 'hidden';
+            }
+        }
+
+        function CHide2() {
+            document.getElementById('btnMH').style.display = 'none';
+            document.getElementById('btnMS').style.display = 'inline';
+            document.getElementById('menu').style.visibility = 'hidden';
+
+           if (window.innerWidth > 600)  {
+                document.getElementById('logo').style.visibility = 'visible';
+            }
+
+        }
+
+        function CShow() {
+
+            document.getElementById('all').style.visibility = 'hidden';
+            document.getElementById('btnCS2').style.display = 'inline';
+            document.getElementById('btnCS1').style.display = 'none';
+            document.getElementById('btnMH').style.display = 'none';
+            document.getElementById('btnMS').style.display = 'none';
+            document.getElementById('menu').style.visibility = 'hidden';
+            document.getElementById('logo').style.visibility = 'hidden';
+
+            if (window.innerWidth <= 1000) {
+                document.getElementById('colorIMG2').style.visibility = 'visible';
+            }
+            if (window.innerWidth > 1000) {
+                document.getElementById('colorIMG').style.visibility = 'visible';
+            }
+
+        }
+
+        function CHide() {
+            document.getElementById('all').style.visibility = 'visible';
+            document.getElementById('btnCS2').style.display = 'none';
+            document.getElementById('btnCS1').style.display = 'inline';
+            document.getElementById('btnMH').style.display = 'none';
+            document.getElementById('btnMS').style.display = 'inline';
+            document.getElementById('colorIMG2').style.visibility = 'hidden';
+            document.getElementById('colorIMG').style.visibility = 'hidden';
+
+            if (window.innerWidth > 1000)  {
+                document.getElementById('logo').style.visibility = 'visible';
+            }
+        }
+
+    </script>
+
+</head>
+
+<body id="body">
+    <div id="img">
+        <img src="IMG/flat-design-color-chart-mobile.png" title="color chart" id="colorIMG">
+        <img src="IMG/flat-design-color-chart.png" title="color chart" id="colorIMG2">
+        <form>
+            <input id="btnC2" class="btn" onclick="CHide()" type="button" value="Verstecken" />
+        </form>
+    </div>
+    <div id="all">
+        <div id="front">
+            <h1>Projekte</h1>
+            <h3>News: </h3>
+        </div>
+
+        <div class="containerLB">
+            <div class="head">
+                <div class="head" id="headRC">
+                    <h3>Programmierhilfe</h3>
+                </div>
+                <div class="head" id="headLC">
+                    <h3>Schulprojekte</h3>
+                </div>
+            </div>
+
+            <div class="proposal">
+                <div class="pBTN">
+                    <form action="../OLD/mobile/index.html">
+                        <input class="proposalBTN btn" type="submit" value="C#" />
+                    </form>
+                </div>
+            </div>
+            <div class="schulprojekte">
+                <div class="projects">
+                    <h4>HTML Projekte:</h4>
+                    <form action="impressum/index.html">
+                        <input class="proposalBTN btn proposalBTN2 btn2" type="submit" value="Impressum" />
+                    </form>
+                    <form action="Aufgaben/Übung/Übung_WIBU_Seite/index.html">
+                        <input class="proposalBTN btn proposalBTN2 btn2" type="submit" value="Prüfungsvorbereitung" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <img id="logo" src="IMG/LOGO.png" title="logo" height="700" width="auto">
+        <div id="menu">
+            <h4>MENU</h4>
+            <div id="btnMM">
+                <form action="">
+                    <input class="menuBTN btn" type="submit" value="Test" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+        <div id="back">
+            <form>
+                <input id="btnMS" class="btn btnMENU" onclick="CShow2()" type="button" value="Menu" />
+            </form>
+            <form>
+                <input id="btnMH" class="btn btnMENU" onclick="CHide2()" type="button" value="Hide Menu" />
+            </form>
+            <form action="../index.html">
+                <input class="btn" id="goBack" type="submit" value="Zurück" />
+            </form>
+            <form>
+                <input class="btn" id="btnCS1" onclick="CShow()" type="button" value="ColorCodes" />
+            </form>
+            <form >
+                <input class="btn" id="btnCS2" onclick="CHide()" type="button" value="Verstecken" style="display: none" />
+            </form>
+        </div>
+</body>
+

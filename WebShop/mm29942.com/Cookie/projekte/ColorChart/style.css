@@ -1,0 +1,55 @@
+body {
+    position: fixed;
+}
+
+#colorIMG {
+    display: none;
+}
+img {
+    position: center;
+    width: auto;
+    max-width: 85%;
+    max-height: 1000px;
+    height: auto;
+    bottom: 50%;
+    margin: 0 auto;
+    margin-left: 10%;
+    right: 5%;
+    left: 0;
+}
+#img {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    left: 0%;
+}
+
+@media only screen and (min-width: 440px) {
+    img {
+        margin-left: 30%;
+    }
+}
+@media only screen and (min-width: 650px) {
+    img {
+        margin-left: 55%;
+    }
+}
+@media only screen and (min-width: 800px) {
+    img {
+        margin-left: 70%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #colorIMG {
+        display: block;
+    }
+    #colorIMG2 {
+        display: none;
+    }
+    img {
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+}

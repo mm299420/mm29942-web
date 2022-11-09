@@ -1,0 +1,25 @@
+.h3 {
+    margin-bottom: -10px;
+    padding-top: 10px;
+}
+
+a {
+    color: black;
+}
+#back {
+	text-align: right;
+	position: fixed;
+	bottom: 2.5%;
+    right: 2.5%;
+}
+#btn
+{
+    color: White;
+    background-color: #273746;
+	border-radius: 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}

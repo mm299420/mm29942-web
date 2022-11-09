@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../buttonSTYLE.css">
+    <link rel="icon" href="../../IMG/cicada.png" type="image/png">
+    <script>
+        function CShow()
+        {
+            document.getElementById('colorIMG').style.visibility = 'visible';
+            document.getElementById('all').style.visibility = 'hidden';
+            document.getElementById('btnC2').style.visibility = 'visible';
+        }
+        function CHide()
+        {
+            document.getElementById('colorIMG').style.visibility = 'hidden';
+            document.getElementById('all').style.visibility = 'visible';
+            document.getElementById('btnC2').style.visibility = 'hidden';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="img">
+        <img src="../../IMG/flat-design-color-chart.png" title="Code" id="colorIMG">
+        <button id="btnC2" class="btn" onclick="CHide()">Verstecken</button>
+    </div>
+
+    <div id="all">
+        <h1>Programmierhilfe</h1>
+
+        <div class="HTML">
+            <h4>HTML:</h4>
+            <li class="CList">
+                <button onclick="CShow()" class="btn">ColorCodes</button>
+            </li>
+            <li class="CList">
+                <button onclick="CShow()" class="btn">Positionierung</button>
+            </li>
+            <li class="CList">
+                <button onclick="CShow()" class="btn">Head/<br  />MetaDaten</button>
+            </li>
+        </div>
+        <div class="CSS">
+            <li class="CList2">
+                <h5>CSS: <button  id="css" onclick="" class="btn">Grundbefehle</button></h5>
+            </li>
+        </div>
+        <div class="JavaScript">
+            <h4>JavaScript:</h4>
+            <li class="CList">
+                <button onclick="" class="btn"></button>
+            </li>
+        </div>
+    </div>
+
+    <div id="back">
+        <form action="../../../index.php">
+            <input class="btn" type="submit" value="Zurück" />
+        </form>
+    </div>
+
+</body>
+</html>

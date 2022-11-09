@@ -1,0 +1,134 @@
+body {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #DDDDDD;
+}
+#body {
+    width: 65%;
+    top: 3%;
+    right: 3%;
+    left: 3%;
+}
+#headB {
+    width: 50%;
+}
+.PIC {
+    padding: 2px;
+    float: right;
+    border: 1px black solid;
+}
+.PIC2 {
+    margin: 0.4%;
+    float: left;
+}
+.txt {
+    text-align: left;
+}
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th {
+    text-align: center;
+}
+td {
+    border: 1px solid black;
+    color: #DDDDDD;
+}
+.c1 {
+    width: 25%;
+}
+.c2 {
+    width: 75%;
+}
+.c1, .c2 {
+    border: 2px solid black;
+}
+li {
+    padding-top: 1%;
+}
+h2 {
+    color: #128aa0;
+}
+a {
+    text-decoration: none;
+    background-color: #9fd0e7;
+}
+a:hover {
+    background-color: #3cb3eb;
+}
+#dresden:hover {
+    color: red;
+}
+
+
+#back {
+    text-align: right;
+    position: fixed;
+    bottom: 2.5%;
+    right: 2.5%;
+    align-content: center;
+    align-items: center;
+}
+
+#btn {
+    color: White;
+    background-color: #273746;
+    border-radius: 12.5%;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn2 > .btn {
+    color: White;
+    background-color: #F1948A;
+    border-radius: 12.5%;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: black;
+    font-weight: bold;
+}
+
+.head:hover #headLC:hover h3 {
+    color: white;
+}
+
+.head:hover #headRC:hover h3 {
+    color: white;
+}
+
+#menu {
+    position: fixed;
+    background-color: black;
+    color: #D7BDE2;
+    margin-bottom: 3em;
+    width: 40%;
+    height: 25%;
+    visibility: hidden;
+    top: 5%;
+    right: 5%;
+    text-align: center;
+}
+
+#menu:hover {
+    color: white;
+}
+
+#btnMM {
+    text-align: left;
+    margin-left: 1%;
+}

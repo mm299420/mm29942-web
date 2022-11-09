@@ -1,0 +1,11 @@
+body
+{
+    display: flex;
+    text-align: center;
+}
+#asciiArt
+{
+    width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}

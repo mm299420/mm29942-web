@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../buttonSTYLE.css">
+    <link rel="icon" href="../IMG/cicada.png" type="image/png">
+
+</head>
+
+<body style="background-color: transparent!important;">
+    <form action="senden()" style="background-color: transparent!important;">
+        <form>
+            <label for="text"> Name: </label>
+            <input type="text" id="text"><br/><br/>
+        </form>
+        <form>
+            <label for="typ" > Typ: </label>
+            <select size="1" name="typ" id="typ">
+                <option for="typ" value="true"> true </option><br/>
+                <option for="typ" value="false"> false </option><br/><br/>
+            </select>
+        </form>
+        <form>
+            <input id="vegan1" value="false" name="no" type="radio">
+            <input id="vegan2" value="true" name="yes" type="radio">
+            <label> vegan? </label><br/>
+            <label for="vegan1"> no </label><br/>
+            <label for="vegan2"> yes </label><br/><br/>
+        </form>
+        <form>
+            <label for="check"> Jaa ich liebe das leben im tod </label><br/>
+            <input type="checkbox" name="true" id="check"><br/><br/>
+        </form>
+        <input id="btnS" class="btn" onclick="senden()" type="button" value="Senden">
+    </form>
+    <div id="back">
+        <form action="../../index.html">
+            <input class="btn" type="submit" value="Zurück" />
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+    background-image: url("../IMG/flat-design-color-chart.png");
+    background-size: 110%, cover;
+    background-position: top;
+}
+@media only screen and (min-width: 1135px) {
+    body {
+        background-image: url('../IMG/flat-design-color-chart-mobile.png');
+    }
+}d

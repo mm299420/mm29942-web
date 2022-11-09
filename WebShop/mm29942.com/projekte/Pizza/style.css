@@ -1,0 +1,19 @@
+p {
+	border: dotted lawngreen 1px;
+	padding: 5px;
+	margin: 15px;
+	color: white;
+}
+.btnG {
+	background-color: #EC7063!important;
+	color: black!important;
+}
+.readonly {
+	pointer-events: none;
+}
+.readonly {
+	pointer-events: none;
+}
+.uF {
+	display: none;
+}

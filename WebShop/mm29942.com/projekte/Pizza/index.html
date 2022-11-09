@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../buttonSTYLE.css">
+    <link rel="icon" href="../IMG/cicada.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var salat, name, addr, plz, pizzaT,pizzaP,pizzaM,pT,pP,pM, PriceB, PriceN, rest, pay, tip;
+        var f = true;
+        //document.getElementById("price").setAttribute('readonly', 'readonly');
+
+        function senden() {
+            name = document.getElementById("reciver").value;
+            document.getElementById("price").setAttribute('readonly', 'readonly');
+            addr = document.getElementById("Addr").value;
+            plz = document.getElementById("Plz").value;
+            pizzaT = document.getElementById("checkT").checked;
+            pizzaP = document.getElementById("checkS").checked;
+            pizzaM = document.getElementById("checkM").checked;
+            salat = document.getElementById("salat1").checked;
+
+            var f = false;
+            if (name == "" || addr == "" || plz == "")
+            {
+                alert("Bitte mit * makierte felder ausfüllen!")
+            }
+            else {
+                f = true;
+                document.getElementById("btnP").style.display = "inline";
+                document.getElementById("tipF").style.display = "inline";
+                document.getElementById("payF").style.display = "inline";
+                document.getElementById("restF").style.display = "inline";
+            }
+            if (f)
+            {
+                PriceB = 0;
+                if (pizzaT)
+                {
+                    //pT = 9.99;
+                    PriceB += 9.99;
+                }
+                if (pizzaP)
+                {
+                    //pP = 13.50;
+                    PriceB += 13.50;
+                }
+                if (pizzaM)
+                {
+                    //pM = 6;
+                    PriceB += 6;
+                }
+                if (salat)
+                {
+                    PriceB += 2;
+                }
+                PriceN =  PriceB * 1.19;
+                document.getElementById("price").value = PriceN;
+                rest = PriceN - pay;
+                if (tip > 0)
+                {
+                    rest -= pay;
+                }
+                if (document.getElementById("btnS").onload) {
+                    document.getElementById("price").value = PriceN;
+                }
+
+                //alert("Brutto: "+PriceB + "\nNetto: " + PriceN)
+            }
+
+        }
+        function payP()
+        {
+            rest = document.getElementById("rest").value;
+            pay = document.getElementById("pay").value;
+            tip = document.getElementById("tip").value;
+            topay = document.getElementById("price").value;
+
+            if (pay > topay)
+            {
+                rest = pay-topay;
+                if (tip > 0)
+                {
+                    rest -= tip;
+                }
+                alert("Brutto: "+PriceB + "\nNetto: " + PriceN + "\n\nZurückbekommen: " + rest + "\nTrinkeld: " + tip)
+
+                if (document.getElementById("multiuser1").checked)
+                {
+                    document.getElementById("ShopForm").style.display = "none";
+                    document.getElementById("UserForm").style.display = "inline";
+
+                }
+            } else if (pay == topay && tip == 0)
+            {
+                if (document.getElementById("multiuser1").checked)
+                {
+                    document.getElementById("ShopForm").style.display = "none";
+                    document.getElementById("UserForm").style.display = "inline";
+                }
+                alert("Betrag Passt");
+            } else
+            {
+                rest =  topay - pay
+                alert("Bitte noch " + rest + "€ Zahlen");
+            }
+            document.getElementById("rest").value = rest;
+            document.getElementById("ToPay").value = document.getElementById("pay").value;;
+        }
+        function fertig()
+        {
+            document.getElementById("form").style.display = "inline";
+            document.getElementById("p").innerText = "";
+            document.getElementById("MessageBox").style.display = "none";
+        }
+        function user()
+        {
+            names = document.getElementsByClassName("names")
+            expanse = document.getElementsByClassName("expanse")
+            priv = document.getElementsByClassName("priv")
+
+            var rest = 0;
+            var tmp = 0;
+            var money = 0;
+            var privR = 0;
+
+            var sum = expanse.length;
+            money = 0;
+            sum = expanse.length;
+            var run = false
+            ToPay = document.getElementById("ToPay").value;
+            names = document.getElementsByClassName("names");
+
+            for (let index = 0; index < sum; index++) {
+                tmp =+ expanse[index].value;
+                money = (money+tmp);
+                console.log(sum + ": " + money);
+            }
+            var alertA = false;
+            var alertB = false;
+            var alertC = false;
+            var alertD = false;
+
+            for (let index = 0; index < sum; index++) {
+                if (names[index].value == '' && money < ToPay) {
+                    alertA = true;
+                } else if (names[index].value == '') {
+                    alertB = true;
+                } else if (money < ToPay) {
+                    alertC = true;
+                } else {
+                    tmp =+ expanse[index].value;
+                    privR = tmp - (money / sum);;
+                    priv[index].value = privR
+                    tmp = 0;
+                    alertD
+                }
+            }
+
+            if (alertA) {
+                alert("Bitte alle Namen einfügen und noch " + (ToPay - money) + "€ Zahlen!")
+                alertA = false;
+            }
+            else if (alertB) {
+                alert("Bitte alle Namen einfügen!")
+                alertB = false;
+            }
+            else if (alertC) {
+                alert("Bitte noch " + (ToPay - money) + "€ Zahlen!")
+                alertC = false;
+            }
+            else if (alertD) {
+                alert("Rechnung erfolgreich durchgeführt!")
+                alertD = false;
+            }
+        }
+        function Ap()
+        {
+            names = document.getElementsByClassName("names")
+
+            expanse = document.getElementsByClassName("expanse")
+
+            var $UserForm = $( "#UserForm" ),
+                str = "<form id='user1'>\n" +
+                    "            <form id=\"user1\">\n" +
+                    "                <br /><br /><label for=\"name\"> Name*: </label>\n" +
+                    "                <input class=\"names\" type=\"reciver\" placeholder=\"Max Mustermann\" id=\"name\">\n" +
+                    "\n" +
+                    "                <br /><label for=\"payed\"> Gezahlt*: </label>\n" +
+                    "                <input class=\"expanse\" type=\"number\" placeholder=\"Max Mustermann\" id=\"payed\">\n" +
+
+                    "                <br /><label for=\"privrest\"> Restgeld*: </label>\n" +
+                    "                <input class=\"priv readonly\" type=\"number\" placeholder=\"Restgeld\" id=\"privrest\"><br /><br />\n" +
+                    "            </form>\n" +
+                    "\n" +
+                    "        </form>",
+                html = $.parseHTML( str ),
+                nodeNames = [];
+
+            // Append the parsed HTML
+            $UserForm.append( html );
+
+            // Gather the parsed HTML's node names
+            /*$.each( html, function( i, el ) {
+                nodeNames[ i ] = "<li>" + el.nodeName + "</li>";
+            })
+            // Insert the node names
+            $UserForm.append( "<h3>Node Names:</h3>" );
+            $( "<ol></ol>" )
+                .append( nodeNames.join( "" ) )
+                .appendTo( $UserForm );*/
+
+
+        }
+        function remove() {
+            $('#user1').remove()
+        }
+    </script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous">
+    </script>
+</head>
+
+<body style="background-color: #201f1f!important; color: white!important;">
+
+<div style="background-color: transparent!important;" id="form">
+    <div id="ShopForm">
+        <form>
+            <form>
+                <label for="reciver"> Name*: </label>
+                <input type="reciver" placeholder="Max Mustermann" id="reciver">
+            </form>
+            <form>
+                <label for="Addr"> Straße & Nr*: </label>
+                <input type="Addr" placeholder="Str 9" id="Addr">
+            </form>
+            <form>
+                <label for="Plz"> Plz*: </label>
+                <input type="Plz" placeholder="30117" id="Plz">
+            </form>
+            <form>
+                <br/><br/><input type="checkbox" onclick="senden()" name="true" id="checkT">
+                <label for="checkT">Pizza Tunfisch 9,99€</label><br/>
+            </form>
+            <form>
+                <br/><br/><input type="checkbox" onclick="senden()" name="true" id="checkS">
+                <label for="checkS">Pizza Salami 13,50€</label><br/>
+            </form>
+            <form>
+                <br/><br/><input type="checkbox" onclick="senden()" name="true" id="checkM">
+                <label for="checkM">Pizza Magerita 6€</label><br/>
+            </form>
+            <form>
+                <br /><br /><label  class="salat"> salat +2€? </label><br />
+                <label for="salat1"> yes </label>
+                <input  onclick="senden() "id="salat1" class="salat" value="true" name="salat" type="radio"><br />
+                <label for="salat2"> no </label>
+                <input id="salat2" class="salat" checked value="false" name="salat" type="radio">
+            </form>
+            <form>
+                <br /><br /><label for="price">Zu Zahlen(+mwst): </label>
+                <input type="price" class="readonly" placeholder="Betrag" id="price">
+            </form>
+            <form id="payF" style="display: none">
+                <br /><label for="pay">Gezahlt: </label>
+                <input type="pay" placeholder="Gezahlt" id="pay">
+            </form>
+            <form id="tipF" style="display: none">
+                <br /><label for="tip">Trinkgeld: </label>
+                <input type="tip" placeholder="Trinkgeld" id="tip">
+            </form>
+            <form id="restF" style="display: none">
+                <br /><label for="rest">Restgeld: </label>
+                <input type="rest" class="readonly" placeholder="Restbetrag" id="rest">
+            </form>
+
+            <form>
+                <br /><br /><label  class="multiuser">Rechnung Teilen?</label><br />
+                <label for="multiuser1"> yes </label>
+                <input id="multiuser1" class="multiuser"  value="true" name="multiuser" type="radio"><br />
+                <label for="multiuser2"> no </label>
+                <input id="multiuser2" class="salat" checked value="false" name="multiuser" type="radio">
+            </form>
+
+            <input id="btnS" class="btn btnG" onclick="senden()" type="button" value="Senden" style="display: none">
+            <br/><br/><input id="btnP" class="btn btnG" onclick="payP()" type="button" style="display: none" value="Zahlen">
+        </form>
+    </div>
+    <div class="uF" id="UserForm">
+        <form id='usage'>
+            <input id="btnU" class="btn btnG btnU" onclick="user()" type="button" value="Bestätigen">
+            <input id="btnE" class="btn btnG btnU" onclick="remove()" type="button" value="Person Entfernen">
+            <input id="btnW" class="btn btnG btnU" onclick="Ap()" type="button" value="Person Hinzufügen"><br/><br/>
+
+            <label for="ToPay"> zu Zahlen*: </label>
+            <input class="ToPay readonly" type="number" placeholder="To Pay" id="ToPay">
+
+            <form id="user1">
+                <br /><br /><label for="name"> Name*: </label>
+                <input class="names" type="reciver" placeholder="Max Mustermann" id="name">
+
+                <br /><label for="payed"> Gezahlt*: </label>
+                <input type="number" placeholder="Bitte in € Angeben" id="payed" class="expanse">
+
+                <br /><label for="privrest"> Restgeld*: </label>
+                <input type="number" placeholder="Restgeld" id="privrest" class="priv readonly"><br /><br />
+            </form>
+        </form>
+
+    </div>
+</div>
+<div style="display: none;" class="MessageBox" id="MessageBox">
+    <p id="p"></p>
+    <button onclick="fertig()" class="btn btnG" id="fertigB">Fertig</button>
+</div>
+</body>
+</html>

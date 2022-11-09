@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttonSTYLE.css">
+    <link rel="icon" href="IMG/cicada.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function CShow() {
+            document.getElementById('btnMH').style.display = 'inline';
+            document.getElementById('btnMS').style.display = 'none';
+            document.getElementById('menu').style.visibility = 'visible';
+
+            if (window.innerWidth > 600) {
+                document.getElementById('logo').style.visibility = 'hidden';
+            }
+
+            document.getElementById('pHead').style.color='#EC7063';
+            document.getElementById('menu').style.backgroundColor='#D7BDE2';
+
+            if (head.style.color=="#D7BDE2")
+            {
+                document.getElementById('pHead').style.color='white';
+                document.getElementById('menu').style.backgroundColor='Black';
+            }
+        }
+
+
+        function CS() {
+            document.getElementById('btnMH').style.display = 'inline';
+            document.getElementById('btnMS').style.display = 'none';
+            document.getElementById('menu').style.visibility = 'visible';
+
+            if (window.innerWidth > 600) {
+                document.getElementById('logo').style.visibility = 'hidden';
+            }
+        }
+
+        function CHide2() {
+            document.getElementById('btnMH').style.display = 'none';
+            document.getElementById('btnMS').style.display = 'inline';
+            document.getElementById('menu').style.visibility = 'hidden';
+
+            if (window.innerWidth > 600)  {
+                document.getElementById('logo').style.visibility = 'visible';
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="all">
+    <h4>MENU</h4>
+    <div id="transition">
+        <div id="menu">
+            <h4 onclick="CShow();" id="pHead">MENU</h4>
+            <div id="btnMM">
+                <form action="">
+                    <input class="menuBTN btn" type="submit" value="Test" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="back">
+        <form>
+            <img id="btnMS" class="btn btnMENU" onclick="CS()" type="button" src="IMG/menu-icon-white-png-20.jpg" />
+        </form>
+        <form>
+            <div id="rotate">
+                <img id="btnMH" class="btn btnMENU" onclick="CHide2()" type="button" src="IMG/menu-icon-white-png-20.jpg" />
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

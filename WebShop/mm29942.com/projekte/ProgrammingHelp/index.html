@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../buttonSTYLE.css">
+    <link rel="icon" href="../IMG/cicada.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var enabled;
+        var name;
+        var status;
+        var vegan
+        var checkJ;
+        var f = true;
+
+        function senden() {
+            enabled = document.getElementById("checkDV").checked;
+            name = document.getElementById("text").value;
+            status = document.getElementById("typ").value;
+            vegan = document.getElementById("vegan1").checked;
+            checkJ = document.getElementById("check").checked;
+            var f = true;
+            if (name == "" || status == "")
+            {
+                f = false;
+            }
+            if (enabled && f)
+            {if (this.width > "800px") {
+                    alert("Name = " + name + "\nStatus = " + status + "\nVegan? = "  + vegan + "\nÄlter als 28J? = " + checkJ);
+                    console.log("Name = " + name + "\nStatus = " + status + "\nVegan? = "  + vegan + "\nÄlter als 28J? = " + checkJ);
+
+                }
+                else {
+                    getElementById("form").style.display = "none";
+                    document.getElementById("p").innerText = "Name = " + name + "\nStatus = " + status + "\nVegan? = " + vegan + "\nÄlter als 28J? = " + checkJ;
+                    document.getElementById("MessageBox").style.display = "inline";
+                }
+            }
+        }
+        function fertig() {
+            document.getElementById("form").style.display = "inline";
+            document.getElementById("p").innerText = "";
+            document.getElementById("MessageBox").style.display = "none";
+        }
+    </script>
+</head>
+
+<body style="background-color: #201f1f!important; color: white!important;">
+
+<div style="background-color: transparent!important;" id="form">
+    <form>
+
+        <form>
+            <label for="text"> Name*: </label>
+            <input type="text" placeholder="Max Mustermann" id="text">
+        </form>
+        <form>
+            <br /><br /><label for="typ" >Status*: </label>
+            <select size="0" name="typ" id="typ">
+                <option for="typ" style="display: none;" value=""></option><br />
+                <option for="typ" value="Ledig">Ledig</option><br />
+                <option for="typ" value="Verheiratet">Verheiratet</option>
+                <option for="typ" value="Geschieden">Geschieden</option>
+                <option for="typ" value="Verwitwert">Verwitwert</option>
+            </select>
+        </form>
+        <form>
+            <br /><br /><label  class="vegan"> vegan? </label><br />
+            <label for="vegan1"> yes </label>
+            <input id="vegan1" class="vegan" value="true" name="vegan" type="radio"><br />
+            <label for="vegan2"> no </label>
+            <input id="vegan2" class="vegan" checked value="false" name="vegan" type="radio">
+        </form>
+        <form>
+            <br/><br/><input type="checkbox" name="true" id="check">
+            <label for="check">Ich bin über 28J alt</label><br/>
+        </form>
+        <form>
+            <br/><br/><input type="checkbox" name="true" id="checkDV">
+            <label for="checkDV">Ich bin mit der Datenverarbeitung einverstanden*</label><br/>
+        </form>
+        <br/><br/><input id="btnS" class="btn btnG" onclick="senden()" type="button" value="Senden">
+    </form>
+</div>
+<div style="display: none;" class="MessageBox" id="MessageBox">
+    <p id="p"></p>
+    <button onclick="fertig()" class="btn btnG" id="fertigB">Fertig</button>
+</div>
+</body>
+</html>

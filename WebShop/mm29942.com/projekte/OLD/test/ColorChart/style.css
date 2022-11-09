@@ -1,0 +1,26 @@
+#colorIMG {
+    visibility: hidden;
+}
+@media only screen and (max-width: 1000px) {
+    body {
+          background-image: url('../IMG/flat-design-color-chart.png');
+          background-size: 100%, cover;
+      }
+}
+@media only screen and (min-width: 1000px) {
+    #colorIMG {
+        visibility: visible;
+        position: absolute;
+        min-width: 65%;
+        max-width: 100%;
+        height: auto;
+    }
+    #img {
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        width: 90%;
+        top: 10%;
+        left: 5%;
+    }
+}

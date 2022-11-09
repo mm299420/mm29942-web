@@ -1,0 +1,10 @@
+p {
+	border: dotted lawngreen 1px;
+	padding: 5px;
+	margin: 15px;
+	color: white;
+}
+.btnG {
+	background-color: lawngreen!important;
+	color: black!important;
+}

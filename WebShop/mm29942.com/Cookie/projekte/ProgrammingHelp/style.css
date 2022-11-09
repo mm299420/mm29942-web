@@ -1,0 +1,46 @@
+body {
+
+}
+
+h1, h4 {
+	text-decoration: underline;
+}
+
+a:any-link {
+	color: #000000;
+}
+
+a {
+	color: #000000;
+}
+
+#back {
+	text-align: right;
+	position: fixed;
+	bottom: 2.5%;
+    right: 2.5%;
+}
+
+#colorIMG {
+	position: absolute;
+	visibility: hidden;
+	width: 95%;
+	top: 10%;
+	left: 5%;
+}
+
+.img {
+	position: absolute;
+	visibility: hidden;
+	width: 90%;
+	top: 10%;
+	left: 5%;
+}
+
+li {
+	list-style: none;
+}
+
+form {
+	margin: 5px;
+}

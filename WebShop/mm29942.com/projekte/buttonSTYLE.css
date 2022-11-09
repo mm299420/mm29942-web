@@ -1,0 +1,129 @@
+#btn {
+    color: White;
+    background-color: #273746;
+	border-radius: 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.btn {
+    color: White;
+    background-color: #273746;
+	border-radius: 12.5% 12.5% 12.5% 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.btn2 > .btn {
+	color: White;
+	background-color: #F1948A;
+	border-radius: 12.5% 12.5% 12.5% 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.CList {
+	padding-left: 1%;
+	width: 8%;
+	position: relative;
+	text-align: center;
+	left: -0.5%;
+}
+#btnC2 {
+	visibility: hidden;
+	float: right;
+	margin-top: 40%;
+}
+
+#css {
+	margin-left: 1.25%;
+	position: relative;
+	left: -0.75%;
+}
+.CSS {
+	margin-top: 1.8%;
+	position: relative;
+}
+
+#CList2 {
+	margin-left: 1.25%;
+	position: relative;
+	left: -0.75%;
+
+}
+
+#back {
+	text-align: center;
+	position: fixed;
+	bottom: 2.5%;
+    right: 2.5%;
+}
+
+.btnL {
+	margin-top: 2%;
+}
+
+.TESTbtn #TESTbtn {
+	visibility: hidden;
+}
+
+.proposalBTN {
+    color: White;
+    background-color: #273746;
+	border-radius: 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+.proposalBTN2 > .proposalBTN {
+	color: White;
+	background-color: #F1948A;
+	border-radius: 12.5%;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+.pBTN {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#btnMH {
+	display: none;
+}
+#btnMH {
+	 display: none;
+ }
+
+.btn:hover {
+	background-color: #82E0AA;
+	color: black;
+	font-weight: bold;
+}
+
+.menuBTN {
+	margin: 2px;
+	background-color: #148F77;
+}
+

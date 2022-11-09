@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../buttonSTYLE.css">
+    <link rel="icon" href="../IMG/cicada.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function CShow()
+        {
+            document.getElementById('colorIMG').style.visibility = 'visible';
+            document.getElementById('all').style.visibility = 'hidden';
+            document.getElementById('btnC2').style.visibility = 'visible';
+        }
+        function CHide()
+        {
+            document.getElementById('colorIMG').style.visibility = 'hidden';
+            document.getElementById('all').style.visibility = 'visible';
+            document.getElementById('btnC2').style.visibility = 'hidden';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="all">
+        <div class="img">
+            <img src="../IMG/flat-design-color-chart.png" title="color chart" id="colorIMG">
+            <button id="btnC2" class="btn" onclick="CHide()">Verstecken</button>
+        </div>
+        <div class="front">
+            <h1>Schulprojekte</h1>
+            <h3>IFAS 2 | C#: </h3>
+            <div class="projects">
+                <h4>Projekte:</h4>
+                <ol>
+
+                </ol>
+
+                <h3>Weitere Projekte: </h3>
+
+                <div id="source">
+                    <h4>Andere Quellen:</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.mm29942.com/">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="../">HTML Projekte</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerLB">
+            <div class="proposal">
+                <h3 id="headLC">Programmierhilfe</h3>
+                <div class="pBTN">
+                    <form action="">
+                        <input class="proposalBTN" class="btn" type="submit" value="C#" />
+                    </form>
+                </div>
+            </div>
+            <div class="news">
+
+            </div>
+        </div>
+
+        <img id="logo" src="../IMG/LOGO.png" title="logo" height="700" width="auto">
+
+        <div id="back">
+            <form action="../index.html/">
+                <input class="btn" type="submit" value="Zurück" />
+            </form>
+            <button onclick="CShow()" class="btn">ColorCodes</button>
+        </div>
+    </div>
+</body>
+

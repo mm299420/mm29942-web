@@ -1,0 +1,50 @@
+.large {
+    width: 25%;
+    height: 500px;
+    position: relative;
+    background-color: #F1948A;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 1px;
+}
+#large-left {
+    float: right;
+    text-align: center;
+}
+#large-left p{
+    width: 60%;
+    text-align: initial;
+    padding-left: 10%;
+}
+#control .btn{
+    right: 2%;
+    bottom: 20%;
+    position: relative;
+}
+h1 h2 {
+    margin: 1px;
+    padding: 1px;
+}
+.btn {
+    position: absolute;
+}
+a:link {
+    color: gray;
+}
+a:visited {
+    color: white;
+}
+#large-right h2 {
+    text-align: center!important;
+}
+#large-middle h2 {
+    text-align: center!important;
+}
+#large-right {
+    float: right;
+    margin-right: 8.5%;
+}
+
+#h2txt {
+    margin-top: 10%;
+}

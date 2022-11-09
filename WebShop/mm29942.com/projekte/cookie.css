@@ -1,0 +1,55 @@
+#box {
+    width: 35%;
+    height: 65%;
+    background-color: #9fd0e7;
+}
+#cookie-box {
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 30%;
+    height: 65%;
+    top: 10%;
+    background-color: #9fd0e7;
+    z-index:1;
+    left: 33.3%;
+    z-index:1;
+    float: left;
+}
+#cookie-text {
+    overflow: scroll;
+    height: 55%;
+    background-color: #9fd0e7;
+}
+#btnCookie {
+    position: relative;
+    right: 20%;
+
+}
+.btnCookieMenage{
+    position: relative;
+    left: 10%;
+}
+#btnCookieDecline {
+    display: none;
+}
+.btnCookie {
+    background-color: #1D1D1D!important;
+}
+#html {
+    z-index:9999;
+    opacity: 0.2;
+}
+#html::-webkit-scrollbar {
+    background-color: #1D1D1D;
+}
+#html::-webkit-scrollbar-thumb {
+    background-color: #1D1D1D;
+}
+#html::-webkit-scrollbar-corner {
+    background-color: #1D1D1D;
+}
+#html::-moz-selection {
+    background-color: #1f1f1f!important;
+    color: #e8e6e3 !important;
+}
