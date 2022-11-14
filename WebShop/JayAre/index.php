@@ -20,10 +20,12 @@
 <div id="screen">
     <div id="greetings" class="welcome">
         <h1 class="header">Welcome to Jay-Are!</h1>
-        <?php include_once 'templates/elements.php';
+        <?php include 'templates/elements.php';
         menuBTN();
-        menuWindows(); ?>
-        <img src="Images/home_abb.jpg" class="avoid-clicks">
+        menuWindows();
+        //include 'templates/db.php';
+        //connectDB();
+        ?>
     </div>
 </div>
     <?php
@@ -38,5 +40,8 @@
             echo 'Erneuter Besuch!';
         }
     ?>
+    <div id="imgDiv">
+        <img id="img" src="Images/home_abb.jpg" class="avoid-clicks" style="position: absolute; bottom: 0; margin: auto 0; width: 50%; height: auto">
+    </div>
 </body>
 </html>

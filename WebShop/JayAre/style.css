@@ -1,6 +1,10 @@
 #screen {
     text-align: center;
 }
+#img #imgDiv {
+    position: relative;
+    margin: 0 auto;
+}
 .avoid-clicks .btnClear {
     pointer-events: none;
 }
@@ -25,4 +29,7 @@
 .menuWindow {
     display: none;
     margin: 0.5em;
+}
+.dbInput {
+    margin-top: 0.5em;
 }

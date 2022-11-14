@@ -2,29 +2,37 @@
 
 class ContactTicket
 {
-    public $VeranstaltungsTyp;
+    public $VeranstaltungsID;
+    public $VeranstaltungsCategory;
     public $VeranstaltungsDatum;
-    public $NameVeranstalter;
+    public $VeranstalterName;
     public $VeranstaltungsOrt;
-    public $VeranstaltungsDauer;
-    public $VeranstaltungsOptionSetup;
+    public $VeranstaltungsDauerBeginn;
+    public $VeranstaltungsDauerEnd;
+    public $VeranstaltungsMail;
 
+    public function setVeranstaltungsID($ID) {
+        $this->VeranstaltungsID=$ID;
+    }
     public function setVeranstaltungsDatum($Datum) {
         $this->VeranstaltungsDatum=$Datum;
     }
-    public function setVeranstaltungsTyp($Typ) {
-        $this->VeranstaltungsTyp=$Typ;
+    public function setVeranstaltungsCategory($Category) {
+        $this->VeranstaltungsCategory=$Category;
     }
-    public function setNameVeranstalter($Name) {
-        $this->NameVeranstalter=$Name;
+    public function setVeranstalterName($Name) {
+        $this->VeranstalterName=$Name;
     }
     public function setVeranstaltungsOrt($Ort) {
         $this->VeranstaltungsOrt=$Ort;
     }
-    public function setVeranstaltungsDauer($std) {
-        $this->VeranstaltungsDauer=$std;
+    public function setVeranstaltungsDauerBeginn($std) {
+        $this->VeranstaltungsDauerBeginn=$std;
     }
-    public function setVeranstaltungsOptionSetup($choice) {
-        $this->VeranstaltungsOptionSetup=$choice;
+    public function setVeranstaltungsDauerEnd($std) {
+        $this->VeranstaltungsDauerEnd=$std;
+    }
+    public function setVeranstaltungsMail($Mail) {
+        $this->VeranstaltungsMail=$Mail;
     }
 }

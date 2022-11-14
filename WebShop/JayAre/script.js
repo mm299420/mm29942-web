@@ -43,13 +43,13 @@ function Home() {
     window.location.assign("index.php");
 }
 function contact() {
-    window.location.assign("redirects/contact.php");
+    window.location.assign("contact.php");
 }
 function reference() {
-    window.location.assign("redirects/reference.php");
+    window.location.assign("reference.php");
 }
 function press() {
-    window.location.assign("redirects/press.php");
+    window.location.assign("press.php");
 }
 function AboutMe() {
     window.location.assign("aboutme.php");
